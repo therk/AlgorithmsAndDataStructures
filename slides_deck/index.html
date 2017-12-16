@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Algorithms and Data Structures: Slides</title>
+		<meta name="description" content="Slides">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="5dc93db7cfd1765465126076b8836838"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="86a8caeb73d9ec20b06f291c1f8b3469"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1><span>Algorithms and Data Structures</span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 383px; height: auto;" data-block-id="d7bf0074064a509de5a74a08fd42122b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<h2>
+<span>Ruslan<span> </span>Kharitonov</span> </h2>
+</div></div></section><section data-id="7480e3595b040c881f1c00d9881b67a7"><div class="sl-block" data-block-type="text" style="width: 806px; left: -3px; top: 33px; height: auto;" data-block-id="5d6f8e980c792863c1add4d865b0050e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2><span>Development Principles</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 925px; left: 0px; top: 140px; height: auto;" data-block-id="ff23209f618f36f0f202ac9df4cdc489"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 136%;">
+<ol>
+	<li style="text-align: left;">Test Driven Development (TDD)</li>
+	<li style="text-align: left;">Separate Interface from Implementation</li>
+	<li style="text-align: left;">Keep it Simple (KISS)</li>
+	<li style="text-align: left;">Refactor</li>
+	<li style="text-align: left;">Commit Code Frequently</li>
+</ol>
+</div></div></section><section data-id="715b16d605954f0ba1156f58200e4120"><div class="sl-block" data-block-type="text" style="width: 413px; left: 25px; top: 33px; height: auto;" data-block-id="11c389252a031800d6b8e3fb83f2da2b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h2>Linked List</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 951px; left: 0px; top: 107px; height: auto;" data-block-id="9ebd9595cf6ba9fe0fc4f069b3337156"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<ul style="color:rgb(34, 34, 34)">	<li>Linked lists are a dynamic data structure, which can grow and be pruned, <a href="https://en.wikipedia.org/wiki/Allocating_and_deallocating_memory" target="_blank">allocating and deallocating memory</a> while the program is running.</li>	<li>Insertion and deletion node operations are easily implemented in a linked list.</li>	<li>Dynamic data structures such as stacks and queues can be implemented using a linked list.</li>	<li>There is no need to define an initial size for a linked list.</li>	<li>Items can be added or removed from the middle of list.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="65958b0eff8ffebf586d47d4b558ecfd" style="height: auto; min-width: 30px; min-height: 30px; width: 935px; left: 0px; top: 530px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul style="color:rgb(34, 34, 34)">
+	<li>They use more memory than <a href="https://en.wikipedia.org/wiki/Array_data_structure" target="_blank">arrays</a> because of the storage used by their <a href="https://en.wikipedia.org/wiki/Pointer_(computer_science)" target="_blank">pointers</a>.</li>
+	<li>Nodes in a linked list must be read in order from the beginning as linked lists are inherently <a href="https://en.wikipedia.org/wiki/Sequential_access" target="_blank">sequential access</a>.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3943f2d0c499a44e4432a2f4a3e84c26" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 11px; top: 481px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align: left;"><strong>Disadvantages</strong></p>
+</div></div></section><section data-id="72d1029a124a22de377356f8ccba37d6"><div class="sl-block" data-block-type="text" style="width: 556px; left: 18px; top: 33px; height: auto;" data-block-id="bb393763ae6fa03decdd208eee2169a6"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Linked List API</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 581px; left: 29px; top: 179px; height: auto;" data-block-id="96bb2d1b34d296f748fe4706580b99ad"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left; font-size: 133%;">
+<p>Interface using Generics</p>
+
+<ul>
+	<li>Item getNext()</li>
+	<li>void add(Item item)</li>
+	<li>Boolean hasNext()</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 541px; height: 228px; left: 370px; top: 420px;" data-block-id="c4050b31d2f3dd4ae8d6a0ad3040807e"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="527" data-natural-height="222" style="" data-lazy-loaded="" data-src="deck/45ab02885a1386abef46e414dd32183f.png"></div></div></section><section data-id="e329f70c1b28b27d6113c0b29ea7f23e"><div class="sl-block" data-block-type="text" style="width: 889px; left: 36px; top: 33px; height: auto;" data-block-id="aa5035872dce220bf74a1093e53aa66a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;" data-gramm_id="cac3b183-1cd5-587a-91a8-7f11bb3d00d1" data-gramm="true" data-gramm_editor="true">
+<h2>Linked List Node</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-block-id="9c496eece48293ce9c3526a894b1972b" style="min-width: 30px; min-height: 30px; width: 851px; height: 527px; left: 36px; top: 140px;"><div class="sl-block-content" style="z-index: 13; font-size: 240%;" data-highlight-theme="ascetic"><pre class="java"><code>public class Node&lt;Item&gt; {
+    Item item;
+    Node next;
+}</code></pre></div></div></section><section data-id="1d26f98af5662d0c5473d37d57635168"><div class="sl-block" data-block-type="text" style="width: 889px; left: 36px; top: 33px; height: auto;" data-block-id="6c53d5556bc7d5e44997d141d9a9503d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;" data-gramm_id="cac3b183-1cd5-587a-91a8-7f11bb3d00d1" data-gramm="true" data-gramm_editor="true">
+<h2>Linked List</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 901px; height: 518px; left: 36px; top: 182px;" data-block-id="0b4732b1109909b6b264eee3e76a7db9"><div class="sl-block-content" style="z-index: 12; font-size: 114%;" data-highlight-theme="ascetic"><pre class="java"><code>public class MyLinkedList&lt;Item&gt; {
+
+  private Node&lt;Item&gt; node = new Node&lt;Item&gt;();
+
+  boolean hasNext() {
+    return node.next == null;
+  }
+
+  void setItem(Item item) {
+    node.item = item;
+  }
+
+  void addNext(Item item) {
+    Node&lt;Item&gt; oldNode = node;
+    node = new Node&lt;&gt;();
+    node.item = item;
+    node.next = oldNode;
+  }
+
+  Node getNext() {
+    return node.next;
+  }
+}</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="cc76b1a5db644ce50c10fef6087f1662" style="height: auto; min-width: 30px; min-height: 30px; width: 922px; left: 36px; top: 116px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 63%;" data-gramm_id="474232b9-60af-a24a-3623-95d98f254397" data-gramm="true" data-gramm_editor="true">
+<p style="text-align: left;"><a href="http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/util/LinkedList.java" target="_blank">http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/util/LinkedList.java</a></p>
+</div></div></section><section data-id="8c20d7fc74755fa76e2ef42bd40855c5"><div class="sl-block" data-block-type="text" style="width: 889px; left: 36px; top: 33px; height: auto;" data-block-id="896724d576007bc868d65ff5bc0fc5b0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;" data-gramm_id="cac3b183-1cd5-587a-91a8-7f11bb3d00d1" data-gramm="true" data-gramm_editor="true">
+<h2>JUnit Test for the Linked List</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 924px; height: 500px; left: 36px; top: 191px;" data-block-id="deff1abc50b8349427d0c328266d6c73"><div class="sl-block-content" style="z-index: 12; font-size: 128%;" data-highlight-theme="ascetic"><pre class="java"><code>import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class MyLinkedListTest {
+  MyLinkedList&lt;Object&gt; linkedList;
+
+  @Before
+  public void init() {
+    linkedList = new MyLinkedList&lt;&gt;();
+  }
+
+  @Test
+  public void hasNextTest() {
+    assertEquals(false, linkedList.hasNext());
+  }
+}
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f436aa36bdc963190e497a2de91e32c8" style="height: auto; min-width: 30px; min-height: 30px; width: 905px; left: 36px; top: 140px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-gramm_id="b093f8c7-9f57-1f3a-3624-7ee4166fc534" data-gramm="true" data-gramm_editor="true">
+<p style="text-align:left"><a href="http://junit.org/junit4/" target="_blank">http://junit.org/junit4/</a></p>
+</div></div></section><section data-id="bcf860ca3566edc240316548d4bcf8df"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 33px; height: auto;" data-block-id="92b091946b567095d3fcc632a27f4016"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Stacks</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 920px; left: 20px; top: 140px; height: auto;" data-block-id="22fe05ca57c7674bd41f303e37acfc04"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left; font-size: 133%;">
+<ul>
+	<li>Expression Evaluation</li>
+	<li>Parsing in a compiler</li>
+	<li>Memory Managment such as in JVM</li>
+	<li>Undo in a word processor</li>
+	<li>Back button in a Web browser</li>
+	<li>Implementing function calls in a compiler</li>
+	<li>Algorithms such as Depth First Search (DFS)  </li>
+</ul>
+</div></div>
+</section><section data-id="626350bd2bd4a2dbde94e9f0b798060e"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 33px; height: auto;" data-block-id="960a984d683bcfd683c0bf3aaf5fc767"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Stack</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 920px; left: 11px; top: 140px; height: auto;" data-block-id="d16cf3bd01bfd07b8982caea40798694"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left; font-size: 133%;">
+<ul>
+	<li>Last in first out (LIFO) – Get the item most recently added</li>
+	<li>Interface using Generics
+	<ul>
+		<li>void push(Item item)</li>
+		<li>Item pop()</li>
+		<li>Boolean isEmpty()</li>
+	</ul>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 451px; height: 245px; left: 480px; top: 420px;" data-block-id="7b37dbca4cbc53f87ee3b26b16c40ec3"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="473" data-natural-height="257" style="" data-lazy-loaded="" data-src="deck/22576a47bfff331196d589ef2fdf79bf.jpg"></div></div></section><section data-id="d774b00ad22e030105a6351cfa836468"><div class="sl-block" data-block-type="text" style="width: 889px; left: 36px; top: 33px; height: auto;" data-block-id="07be4484ca057624c550fa882a92b5e8"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10; font-size: 85%;" data-gramm_id="cac3b183-1cd5-587a-91a8-7f11bb3d00d1" data-gramm="true" data-gramm_editor="true">
+<h2>Linked List Stack Implementation</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 924px; height: 517px; left: 36px; top: 140px;" data-block-id="96bb77348a97f61e823b97f9c70c0445"><div class="sl-block-content" style="z-index: 11; font-size: 153%;" data-highlight-theme="ascetic"><pre class="java"><code>public class MyStack&lt;Item&gt;{ 
+    private Node first = null; 
+    public boolean isEmpty() { 
+        ...
+    } 
+
+    public void push(Item item) { 
+        ...
+    }
+
+    public Item pop() { 
+        ...
+    }
+}
+</code></pre></div></div>
+</section><section data-id="2f7af361c0e1a99d351ad0f02d2d589e"><div class="sl-block" data-block-type="text" style="width: 889px; left: 36px; top: 33px; height: auto;" data-block-id="c7f1436c26a15d3db1efc45b9d78cf78"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10; font-size: 72%;" data-gramm_id="cac3b183-1cd5-587a-91a8-7f11bb3d00d1" data-gramm="true" data-gramm_editor="true">
+<h2><span>Generic Stack: Linked-list implementation</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 908px; height: 589px; left: 36px; top: 111px;" data-block-id="9b525f1ec81ca91d5861e16383aed01e"><div class="sl-block-content" style="z-index: 11; font-size: 153%;" data-highlight-theme="ascetic"><pre class="java"><code>public class MyStack&lt;Item&gt;{ 
+  private Node&lt;Item&gt; first = null;
+
+  public boolean isEmpty() {
+    return first == null;
+  }
+
+  public void push(Item item) {
+    Node&lt;Item&gt; oldFirst = first;
+    first = new Node&lt;&gt;();
+    first.item = item;
+    first.next = oldFirst;
+  }
+
+  public Item pop() {
+    Item item = first.item;
+    first = first.next;
+    return item;
+  }
+}
+</code></pre></div></div></section><section data-id="51575e2742bab251c5b25a2364df6ab2"><div class="sl-block" data-block-type="text" style="width: 889px; left: 36px; top: 33px; height: auto;" data-block-id="3ff4bef5111464c165ace6a324f23d9a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10; font-size: 78%;" data-gramm_id="cac3b183-1cd5-587a-91a8-7f11bb3d00d1" data-gramm="true" data-gramm_editor="true">
+<h2><span>Refactoring for Generic Stack Interface</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 951px; height: 560px; left: 9px; top: 140px;" data-block-id="ba4cea54673bf49443cd86349e10e8e7"><div class="sl-block-content" style="z-index: 11; font-size: 153%;" data-highlight-theme="ascetic"><pre class="java"><code>public interface MyStack&lt;Item&gt; {
+  public boolean isEmpty();
+  public void push(Item item);
+  public Item pop();
+}
+
+public class LinkedListStack&lt;Item&gt; implements MyStack&lt;Item&gt; { 
+    private Node first = null; 
+    public boolean isEmpty() { 
+        ...
+    } 
+    public void push(Item item) { 
+        ...
+    } 
+    public Item pop() { 
+        ...
+    }
+}
+</code></pre></div></div></section><section data-id="6b7269c93568657972d3e506ed16ad34"><div class="sl-block" data-block-type="text" style="width: 889px; left: 36px; top: 33px; height: auto;" data-block-id="d28e97846802d7b2fd94e92e6ac7409a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10; font-size: 72%;" data-gramm_id="cac3b183-1cd5-587a-91a8-7f11bb3d00d1" data-gramm="true" data-gramm_editor="true">
+<h2><span>Generic Stack: Fixed Array implementation</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 924px; height: 519px; left: 43px; top: 140px;" data-block-id="38b54fcbeb8cfb41ebf22f6893ca55d3"><div class="sl-block-content" style="z-index: 11; font-size: 153%;" data-highlight-theme="ascetic"><pre class="java"><code>public class FixedCapacityStack&lt;Item&gt;{ 
+    private Item[] items; 
+    private int currentLocation = 0; 
+    public FixedCapacityStack(int capacity) { 
+        items = (Item[]) new Object[capacity]; 
+    } 
+    public boolean isEmpty() { 
+        return currentLocation == 0; 
+    } 
+    public void push(Item item) { 
+        items[currentLocation++] = item; 
+    } 
+    public Item pop() { 
+        return items[--currentLocation]; 
+    }
+}
+</code></pre></div></div></section><section data-id="ad371f442cf50572bbe98f07186a4de7"><div class="sl-block" data-block-type="text" style="width: 889px; left: 36px; top: 33px; height: auto;" data-block-id="514e24d30e86119921392a9dfc507d1c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; font-size: 72%;" data-gramm_id="cac3b183-1cd5-587a-91a8-7f11bb3d00d1" data-gramm="true" data-gramm_editor="true">
+<h2><span>Autoboxing</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 924px; height: 311px; left: 36px; top: 294px;" data-block-id="17ebc3d9805f36d850ff88f9a6eb0329"><div class="sl-block-content" style="z-index: 12; font-size: 153%;" data-highlight-theme="ascetic"><pre class="java"><code>Stack&lt;Integer&gt; stack = new Stack&lt;Integer&gt;();
+
+// stack.push(Integer.valueOf(42));
+stack.push(42); 
+
+// int meaningOfLife = stack.pop().intValue();
+Int meaningOfLife = stack.pop(); 
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3658dc6cd089740548704d660ae02f6f" style="height: auto; min-width: 30px; min-height: 30px; width: 832px; left: 36px; top: 160px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align: left;">Automatic cast between a primitive type and its wrapper.</p>
+</div></div></section><section data-id="113f15e8bc5bc8c0627e173573da70ab"><div class="sl-block" data-block-type="text" style="width: 889px; left: 36px; top: 33px; height: auto;" data-block-id="bcf82062ab80298849ff229974da1c59"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10; font-size: 72%;" data-gramm_id="cac3b183-1cd5-587a-91a8-7f11bb3d00d1" data-gramm="true" data-gramm_editor="true">
+<h2><span>Fixing challenges with Array based Stack</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 924px; height: 210px; left: 19px; top: 474px;" data-block-id="6c91f7c076b4b9ea6bf5616e4a1450dd"><div class="sl-block-content" style="z-index: 11; font-size: 153%;" data-highlight-theme="ascetic"><pre class="java"><code>public Item pop() { 
+    // Loitering as we still holding reference 
+    // to items[currentLocation]
+    return items[--currentLocation]; 
+}</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 832px; left: 36px; top: 121px;" data-block-id="0f847bfad188b969f2d95b549c6335c6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li style="text-align:left">
+<strong>Overflow and underflow.</strong>
+	<ul>
+		<li style="text-align:left">
+<strong>Underflow: </strong>throw an exception if pop from an empty stack.</li>
+		<li style="text-align:left">
+<strong>Overflow: </strong>use resizing array for array implementation.</li>
+	</ul>
+	</li>
+	<li style="text-align:left">
+<strong>Null items:</strong> We allow null items to be inserted.</li>
+	<li style="text-align:left">
+<strong>Loitering: </strong>Holding a reference to an object when it is no longer needed.</li>
+</ul>
+</div></div></section><section data-id="78e47de4bb8a7385ef1d1c9defed1848"><div class="sl-block" data-block-type="text" style="width: 889px; left: 36px; top: 44px; height: auto;" data-block-id="dec1939991094ed89cb380947e71f278"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; font-size: 72%;" data-gramm_id="cac3b183-1cd5-587a-91a8-7f11bb3d00d1" data-gramm="true" data-gramm_editor="true">
+<h2><span>Resizing Array Stack Implementation</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 915px; height: 487px; left: 36px; top: 207px;" data-block-id="58e137d9576ba3b5bd33be191eec5ebc"><div class="sl-block-content" style="z-index: 12; font-size: 153%;" data-highlight-theme="ascetic"><pre class="java"><code>public ResizingArrayStack() { 
+    items = new Object[1]; 
+}
+
+public void push(Item item) {
+    if (currentLocation == s.length) resize(2 * s.length);
+    s[currentLocation++] = item;
+}
+
+private void resize(int capacity) {
+    Object[] copy = new Object[capacity];
+    for (int i = 0; i &lt; currentLocation; i++)
+        copy[i] = items[i];
+    items = copy;
+}</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="c99da9dc333b8854f3685a5667b9ba03" style="height: auto; min-width: 30px; min-height: 30px; width: 878px; left: 36px; top: 109px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; white-space: normal;">
+<p style="text-align: left;">If the array is full, create a new array of twice the size, and copy items.</p>
+</div></div></section><section data-id="852633d1093e0bedc9140b7acc398548"><div class="sl-block" data-block-type="text" style="width: 889px; left: 36px; top: 44px; height: auto;" data-block-id="3ce00ffeb1d19f6d2490aa2a602fa915"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10; font-size: 72%;" data-gramm_id="cac3b183-1cd5-587a-91a8-7f11bb3d00d1" data-gramm="true" data-gramm_editor="true">
+<h2><span>Resizing Array Stack Shrinking</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 910px; height: 457px; left: 36px; top: 207px;" data-block-id="6ddfa0a1641a3c2ecd60707a4f013f1e"><div class="sl-block-content" style="z-index: 11; font-size: 153%;" data-highlight-theme="ascetic"><pre class="java"><code>
+
+public Item pop() {
+    String item = items[--currentLocation];
+    items[currentLocation] = null;
+    if (currentLocation &gt; 0 
+     &amp;&amp; currentLocation == items.length/4) 
+        resize(items.length/2);
+     return item;
+}</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 878px; left: 36px; top: 140px;" data-block-id="287dba81f7fe133af1e5d3d879344776"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; white-space: normal;" data-gramm_id="d8235bc8-e107-2e69-bc23-92bdad16737d" data-gramm="true" data-gramm_editor="true">
+<p style="text-align: left;">If the array is full, create a new array of twice the size, and copy items.</p>
+</div></div></section><section data-id="134a3dbecf81e113848844aee7c90566"><div class="sl-block" data-block-type="text" style="width: 889px; left: 29px; top: 37px; height: auto;" data-block-id="e6e3688072e331dbe96046cc17a6841c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10; font-size: 93%;" data-gramm_id="cac3b183-1cd5-587a-91a8-7f11bb3d00d1" data-gramm="true" data-gramm_editor="true">
+<h2><span>Arithmetic Expression Evaluation</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 903px; left: 29px; top: 113px;" data-block-id="594eac9ffd212d8ce7da3001768f1853"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; white-space: normal; font-size: 118%;" data-gramm_id="d8235bc8-e107-2e69-bc23-92bdad16737d" data-gramm="true" data-gramm_editor="true">
+<p style="text-align:left"><strong>4 + ((5 + 3) * 2 + (1+1))</strong></p>
+
+<p style="text-align:left"><span style="font-size:0.7em">Value (operand): 4, 5, 3, 2, ...</span></p>
+
+<p style="text-align:left"><span style="font-size:0.7em">Operator: *, +, /, -, ....</span></p>
+
+<p style="text-align:left"> </p>
+
+<p style="text-align:left"><span style="font-size:1.2em"><strong>Dijkstra's two-stack algorithm</strong></span></p>
+
+<ul>
+	<li style="text-align:left">
+<strong>Value: </strong>push onto the value (operand) stack.</li>
+	<li style="text-align:left">
+<strong>Operator: </strong>push onto the operator stack.</li>
+	<li style="text-align:left">
+<strong>Left parenthesis:</strong> ignore</li>
+	<li style="text-align:left">
+<strong>Right parenthesis: </strong>pop operator and two values; push the results of applying that operator to those values onto the value stack. </li>
+</ul>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1136410,"slug":"deck","title":"Algorithms and Data Structures","description":"","width":960,"height":700,"visibility":"all","published_at":"2017-12-09T16:47:52.179Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/03470c1cf6a7fe85cec3a82309099d5a/thumb.jpg?1512838646","view_count":1,"user":{"id":802742,"username":"ruslankharitonov","name":"Ruslan Kharitonov","description":null,"thumbnail_url":"https://lh4.googleusercontent.com/-6Gu36lD1QHo/AAAAAAAAAAI/AAAAAAAAAMk/WmxJHXJ6HeU/photo.jpg?sz=50","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":654075,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":18,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1513448126848,"font_typekit":null,"font_google":null,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+
+				autoSlide: 0 || 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				loop: false,
+				rtl: false,
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
