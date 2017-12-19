@@ -1,23 +1,31 @@
 public class MyLinkedList<Item> {
 
-  private Node<Item> node = new Node<Item>();
+  private Node<Item> currentNode = new Node<Item>();
+  private Node<Item> headNode = currentNode;
 
-  boolean hasNext() {
-    return node.next == null;
+  public boolean hasNext() {
+    return (headNode.next != null);
   }
 
-  void setItem(Item item) {
-    node.item = item;
+  public void setItem(Item item) {
+    currentNode.item = item;
   }
 
-  void addNext(Item item) {
-    Node<Item> oldNode = node;
-    node = new Node<>();
-    node.item = item;
-    node.next = oldNode;
+  public Item getItem() {
+    return currentNode.item;
   }
 
-  Node getNext() {
-    return node.next;
+  public void add(Item item) {
+    currentNode.next = new Node<>();
+    currentNode.next.item = item;
+    currentNode = currentNode.next;
+  }
+
+  public Item getNext() {
+    if(hasNext()) {
+      headNode = headNode.next;
+      return headNode.item;
+    }
+    return null;
   }
 }
